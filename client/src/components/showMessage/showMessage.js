@@ -12,19 +12,26 @@ const showMessage = ({ message: { text, user }, name }) => {
   return (
     isSentByCurrentUser
       ? (
-        <div className="messageContainer justifyEnd">
+        <div>
           <p className="sentText pr-10">{trimmedName}</p>
-          <div className="messageBox backgroundBlue">
-            <p className="messageText colorWhite">{text}</p>
+            <div className="messageContainer justifyEnd">
+              {/* <div className="messageBox backgroundBlue">
+                <p className="messageText colorWhite">{text}</p>
+              </div> 
+            </div> */}
+            <div className="bubble bubble-bottom-right messageText backgroundBlue colorWhite">{text}</div>
           </div>
-        </div>
+          </div>  
         )
         : (
-          <div className="messageContainer justifyStart">
-            <div className="messageBox backgroundLight">
-              <p className="messageText colorDark">{text}</p>
+          <div>
+            <p className="sentText pl-10">{user}</p>
+            <div className="messageContainer justifyStart">
+              {/* <div className="messageBox backgroundLight">
+                <p className="messageText colorDark">{text}</p>
+              </div> */}
+              <div className="bubble bubble-bottom-left messageText colorDark">{text}</div>
             </div>
-            <p className="sentText pl-10 ">{user}</p>
           </div>
         )
   );

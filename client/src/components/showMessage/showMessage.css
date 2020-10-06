@@ -1,29 +1,63 @@
 .messageBox {
-    background: #F3F3F3;
-    border-radius: 25px;
-    padding: 2px 10px;
-    color: white;
-    display: inline-block;
+  background: #F3F3F3;
+  border-radius: 20px;
+  padding: 5px 20px;
+  color: white;
+  display: inline-block;
+  max-width: 80%;
+  }
+
+  .bubble {
+    margin-top: 0px;
+    position: relative;
+    font-family: sans-serif;
+    line-height: 24px;
     max-width: 80%;
+    background:#828282;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color: #fff;
+  }
+
+  .bubble-bottom-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid #828282;
+    border-right: 12px solid transparent;
+    border-top: 10px solid #828282;
+    border-bottom: 12px solid transparent;
+    left: 3px;
+    bottom: -10px; 
+  }
+
+  .bubble-bottom-right:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 12px solid transparent;
+    border-right: 10px solid #2979FF;
+    border-top: 12px solid transparent;
+    border-bottom: 10px solid transparent;
+    right: 3px;
+    bottom: -7px;
   }
   
   .messageText {
-    width: 100%;
     letter-spacing: 0;
-    float: left;
+     float: right;
     font-size: 1.1em;
     word-wrap: break-word;
-  }
-  
-  .messageText img {
-    vertical-align: middle;
   }
   
   .messageContainer {
     display: flex;
     justify-content: flex-end;
-    padding: 0 3%;
+    padding: 0 5%;
     margin-top: 3px;
+    content: "";
   }
   
   .sentText {
@@ -35,19 +69,16 @@
   }
   
   .pl-10 {
-    padding-left: 10px;
+    padding-left: 20px;
   }
   
   .pr-10 {
-    padding-right: 10px;
+    justify-content: flex-end;
+    padding-right: 20px;
   }
   
   .justifyStart {
     justify-content: flex-start;
-  }
-  
-  .justifyEnd {
-    justify-content: flex-end;
   }
   
   .colorWhite {
